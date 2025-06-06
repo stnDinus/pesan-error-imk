@@ -1,0 +1,61 @@
+\documentclass{article}
+
+% packages
+\usepackage[indonesian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx,float,bbding,xcolor,hyperref,tcolorbox,pagecolor}
+
+% package configs
+\graphicspath{{images/}}
+\definecolor{Accent}{RGB}{175,58,3}
+\definecolor{Info}{RGB}{7,102,120}
+\definecolor{Success}{RGB}{152,151,26}
+\definecolor{Error}{RGB}{204,36,29}
+\definecolor{Foreground0}{RGB}{40,40,40}
+\definecolor{Background0}{RGB}{249,245,215}
+\pagecolor{Background0}
+\color{Foreground0}
+
+% user commands and environments
+\newenvironment{pros}{
+  \let\oldlabelitemi\labelitemi
+  \renewcommand{\labelitemi}{\textcolor{Success}{\Checkmark}}
+  \begin{itemize}
+    }
+    {
+  \end{itemize}
+  \renewcommand{\labelitemi}{\oldlabelitemi}
+}
+
+\newenvironment{cons}{
+  \let\oldlabelitemi\labelitemi
+  \renewcommand{\labelitemi}{\textcolor{Error}{\XSolidBrush}}
+  \begin{itemize}
+    }
+    {
+  \end{itemize}
+  \renewcommand{\labelitemi}{\oldlabelitemi}
+}
+
+\newenvironment{info}[1]{
+  \begin{tcolorbox}[
+      sharp corners,
+      colframe=Info,
+      coltitle=Background0,
+      colback=Background0,
+      colbacktitle=Info,
+      title=\textbf{\textsf{#1}}
+    ]
+  }{
+  \end{tcolorbox}
+}
+
+% frontmatter
+\title{
+  Pesan \textit{Error} Baik dan Buruk \\
+  \large
+  Tugas Interaksi Manusia dan Komputer - \texttt{A11.4216}
+}
+\author{Steven Nugraha - \texttt{A11.2022.14433}}
+
+\begin{document}
