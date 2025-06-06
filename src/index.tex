@@ -10,8 +10,7 @@ Satu pedoman karakteristik pesan error yang baik adalah pesan yang:
 \begin{pros}
 \item Memberikan solusi/langkah berikutnya yang dapat dilakukan oleh
   pengguna secara spesifik (e.g. \texttt{Silahkan muat ulang halaman ini})
-\item Jika terdapat kesalahan pengguna, gunakan pendekatan objektif
-  (e.g. \texttt{Kata sandi harus mengandung angka numerik (0-9)})
+\item Berpenampilan sesuai konteks (e.g. penggunaan warna merah)
 \item Menggunakan preferensi bahasa pengguna (lokalisasi)
 \end{pros}
 Sedangkan, pesan error yang buruk memiliki biasanya berupa pesan yang:
@@ -203,7 +202,42 @@ Pesan di gambar \ref{fig:good-err3} memiliki karakteristik-karakteristik:
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\columnwidth]{bca-good.jpg}
-  \caption{Pesan error saat pembuatan akun pada aplikasi MyBCA}
+  \includegraphics[width=\columnwidth]{pt-good.png}
+  \caption{Pesan error yang mengindikasikan bahwa kriteria input
+  belum terpenuhi dari aplikasi Pejuang Tani}
   \label{fig:good-err4}
 \end{figure}
+\begin{info}{Catatan Penulis}
+  Aplikasi pada gambar \ref{fig:good-err4} merupakan aplikasi pribadi
+  yang disimpan di:
+  \begin{itemize}
+    \item \url{https://github.com/stnDinus/uas_ppb_server} (server, public)
+    \item \url{https://github.com/stnDinus/uas_ppb} (client, private)
+  \end{itemize}
+\end{info}
+Pada gambar \ref{fig:good-err4}, pesan-pesan error memiliki ciri-ciri:
+\begin{pros}
+\item Dapat dipahami oleh pengguna, tidak menggunakan kode status
+\item Menggunakan saran objektif, tanpa menyalahkan pengguna
+\item Warna konteks yang familiar, yaitu tombol \textit{Login}
+  berwarna abu-abu yang mengindikasikan tidak dapat diketuk, teks
+  error berwarna merah.
+\end{pros}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\columnwidth]{concept-good.png}
+  \caption{Konsep dialog error}
+  \label{fig:good-err5}
+\end{figure}
+\begin{info}{Catatan Penulis}
+  Konsep pada gambar \ref{fig:good-err5} merupakan desain pribadi
+  yang dapat dilihat di
+  \url{https://www.figma.com/design/Lox4KX1iKN2ZUHeweQrpc7/Alerts?node-id=0-1&t=yltzRAXqFTp7kYVg-1}
+\end{info}
+Pesan error pada gambar \ref{fig:good-err5} memiliki ciri-ciri:
+\begin{pros}
+\item Warna merah dengan icon silang yang memberi konteks error yang jelas
+\item Menganjurkan pengembang dari desain untuk tidak menggunakan
+  kode status, dengan \textit{placeholder} teks yang rinci
+\end{pros}
