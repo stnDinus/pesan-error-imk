@@ -3,10 +3,14 @@
 % packages
 \usepackage[indonesian]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage{graphicx,float,bbding,xcolor,hyperref,tcolorbox,pagecolor}
+\usepackage{graphicx,float,bbding,xcolor,hyperref,tcolorbox,pagecolor,fancyhdr}
 
 % package configs
 \graphicspath{{images/}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,RO]{\thepage}
+\fancyhead[LE,LO]{\rightmark}
 \definecolor{Accent}{RGB}{175,58,3}
 \definecolor{Info}{RGB}{7,102,120}
 \definecolor{Success}{RGB}{152,151,26}
